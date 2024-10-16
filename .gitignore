@@ -1,1 +1,6 @@
-.ipynb_checkpoints
+# Jupyter notebook dependencies
+.ipynb_checkpoints/
+
+
+# Node.js dependencies
+node_modules/
