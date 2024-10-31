@@ -20,22 +20,23 @@ const solution = (edges, startNode) => {
    * 두 번쨰 Graph : { A: [ 'B', 'C' ], B: [ 'D', 'E' ], C: [ 'F' ], E: [ 'F' ] }
    */
 
+  // // 2. DFS(깊이 우선 탐색) 함수 정의
+  // function dfs(currentNode, visitedNodes, result) {
+  //   // 현재 노드를 방문한 목록에 추가
+  //   visitedNodes.add(currentNode); // Set(1) { 'A' }
+
+  //   // 결과 배열에 현재 노드를 추가
+  //   result.push(currentNode); // ['A']
+
+  //   // 현재 노드에 인접한 노드들 순회
+  //   (adjacencyList[currentNode] || []).forEach((neighborNode) => {
+  //     // 인접한 노드 중 아직 방문하지 않은 노드에 대해 재귀적으로 DFS 호출
+  //     if (!visitedNodes.has(neighborNode)) {
+  //       dfs(neighborNode, visitedNodes, result);
+  //     }
+  //   });
+  // }
   // 2. DFS(깊이 우선 탐색) 함수 정의
-  function dfs(currentNode, visitedNodes, result) {
-    // 현재 노드를 방문한 목록에 추가
-    visitedNodes.add(currentNode); // Set(1) { 'A' }
-
-    // 결과 배열에 현재 노드를 추가
-    result.push(currentNode); // ['A']
-
-    // 현재 노드에 인접한 노드들 순회
-    (adjacencyList[currentNode] || []).forEach((neighborNode) => {
-      // 인접한 노드 중 아직 방문하지 않은 노드에 대해 재귀적으로 DFS 호출
-      if (!visitedNodes.has(neighborNode)) {
-        dfs(neighborNode, visitedNodes, result);
-      }
-    });
-  }
 
   function dfs(currentNode, visitedNodes, result) {
     // 현재 노드를 방문한 목록에 추가
